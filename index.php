@@ -417,8 +417,55 @@ if (
 				)
 			);
 
+			/**
+			 * Featured event background color
+			 */
+			$wp_customize->add_setting(
+				'tecc_featured_event_background_color',
+				array(
+					'transport' => 'postMessage'
+				)
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'tecc_featured_event_background_color',
+					array(
+						'label'       => __( 'Featured Event Background Color', 'tribe-ext-calendar-customizer' ),
+						'section'     => 'month_week_view',
+						'settings'    => 'tecc_featured_event_background_color'
+					)
+				)
+			);
+
+			/**
+			 * Featured event text color
+			 */
+			$wp_customize->add_setting(
+				'tecc_featured_event_text_color',
+				array(
+					'transport' => 'postMessage'
+				)
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'tecc_featured_event_text_color',
+					array(
+						'label'       => __( 'Featured Event Text Color', 'tribe-ext-calendar-customizer' ),
+						'section'     => 'month_week_view',
+						'settings'    => 'tecc_featured_event_text_color'
+					)
+				)
+			);
+
 		} // end function tecc_register_customizer()
 
+		/**
+		 * Generating the CSS
+		 */
 		function tecc_css() {
 			?>
 			<style type="text/css">
@@ -522,6 +569,18 @@ if (
 				<?php if( get_theme_mod( 'tecc_view_all_text_color' ) ) { ?>
 				.tribe-events-calendar td .tribe-events-viewmore a {
 					color: <?php echo get_theme_mod( 'tecc_view_all_text_color' ); ?>;
+				}
+				<?php } // end if ?>
+
+				<?php if( get_theme_mod( 'tecc_featured_event_background_color' ) ) { ?>
+				#tribe-events-content.tribe-events-month table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
+					background-color: <?php echo get_theme_mod( 'tecc_featured_event_background_color' ); ?>;
+				}
+				<?php } // end if ?>
+
+				<?php if( get_theme_mod( 'tecc_featured_event_text_color' ) ) { ?>
+				#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured .tribe-events-month-event-title a {
+					color: <?php echo get_theme_mod( 'tecc_featured_event_text_color' ); ?>;
 				}
 				<?php } // end if ?>
 

@@ -140,5 +140,18 @@
         } );
     } );
 
+    /* Featured event background color */
+    wp.customize( 'tecc_featured_event_background_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content.tribe-events-month table.tribe-events-calendar .type-tribe_events.tribe-event-featured' ).css( 'background-color', to );
+        } );
+    } );
+
+    /* Featured event text color */
+    wp.customize( 'tecc_featured_event_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured .tribe-events-month-event-title a' ).css( 'color', to );
+        } );
+    } );
 
 })( jQuery );
