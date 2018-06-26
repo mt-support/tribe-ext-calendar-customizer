@@ -56,6 +56,11 @@ if (
 
 		}
 
+		/**
+		 * Add settings to the customizer under The Events Calendar > Month view
+		 *
+		 * @param $wp_customize
+		 */
 		function tecc_register_customizer( $wp_customize ) {
 
 			/**
@@ -469,12 +474,6 @@ if (
 		function tecc_css() {
 			?>
 			<style type="text/css">
-				<?php if( false === get_theme_mod( 'tcx2_display_header' ) ) { ?>
-				#header {
-					display: none;
-				}
-				<?php } // end if ?>
-
 				<?php if( get_theme_mod( 'tecc_header_row_background') ) { ?>
 				#tribe-events-content .tribe-events-calendar thead th {
 					background-color: <?php echo get_theme_mod( 'tecc_header_row_background' ); ?>;
@@ -588,6 +587,9 @@ if (
 			<?php
 		} // end function tecc_css()
 
+		/**
+		 * Enqueue script for live preview
+		 */
 		function tecc_live_preview() {
 			wp_enqueue_script(
 				'tribe-ext-calendar-customizer-plugin',
