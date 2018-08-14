@@ -40,6 +40,8 @@ if (
 		 */
 		public function construct() {
 			$this->add_required_plugin( 'Tribe__Events__Main', '4.6' );
+
+			define( 'MY_PLUGIN_PATH', plugin_dir_url( __FILE__ ) );
 		}
 
 		/**
@@ -50,10 +52,6 @@ if (
 			// Don't forget to generate the 'languages/match-the-plugin-directory-name.pot' file
 			load_plugin_textdomain( 'tribe-ext-calendar-customizer', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 
-			//add_action( 'customize_register', array( $this, 'tecc_register_customizer' ) );
-			//add_action( 'wp_head', array( $this, 'tecc_css' ) );
-			//add_action( 'customize_preview_init', array( $this, 'tecc_live_preview' ) );
-
 			if ( ! class_exists( 'Tribe__View_Class' ) ) {
 				require_once dirname( __FILE__ ) . '/src/classes/View_Class.php';
 			}
@@ -62,6 +60,10 @@ if (
 			}
 
 			$month_view = new Month_View_Class();
+
+			add_action( 'customize_register', array( $month_view, 'tecc_register_customizer' ) );
+			add_action( 'wp_head', array( $month_view, 'tecc_css' ) );
+			add_action( 'customize_preview_init', array( $month_view, 'tecc_live_preview' ) );
 
 		}
 

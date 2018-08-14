@@ -14,20 +14,12 @@ if ( class_exists( 'Tribe__View_Class' ) ) {
  */
 class Month_View_Class extends Tribe__View_Class {
 
-	public function init() {
-
-		add_action( 'customize_register', array( $this, 'tecc_register_customizer' ) );
-		add_action( 'wp_head', array( $this, 'tecc_css' ) );
-		add_action( 'customize_preview_init', array( $this, 'tecc_live_preview' ) );
-
-	}
-
 	/**
 	 * Add settings to the customizer under The Events Calendar > Month view
 	 *
 	 * @param $wp_customize
 	 */
-	function tecc_register_customizer( $wp_customize ) {
+	public function tecc_register_customizer( $wp_customize ) {
 
 		/**
 		 * Header row background
@@ -437,7 +429,7 @@ class Month_View_Class extends Tribe__View_Class {
 	/**
 	 * Generating the CSS
 	 */
-	function tecc_css() {
+	public function tecc_css() {
 		?>
 		<style type="text/css">
 			<?php if( get_theme_mod( 'tecc_header_row_background') ) { ?>
@@ -556,10 +548,11 @@ class Month_View_Class extends Tribe__View_Class {
 	/**
 	 * Enqueue script for live preview
 	 */
-	function tecc_live_preview() {
+	public function tecc_live_preview() {
+		echo "xxx" . MY_PLUGIN_PATH;
 		wp_enqueue_script(
-			'tribe-ext-calendar-customizer-plugin',
-			plugin_dir_url( __FILE__ ) . 'js/tribe-ext-calendar-customizer.js',
+			'tribe-ext-calendar-customizer-plugin-1',
+			MY_PLUGIN_PATH . 'js/tribe-ext-calendar-customizer.js',
 			array( 'jquery', 'customize-preview' ),
 			'1.0.0',
 			true
