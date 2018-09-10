@@ -52,11 +52,14 @@ if (
 			// Don't forget to generate the 'languages/match-the-plugin-directory-name.pot' file
 			load_plugin_textdomain( 'tribe-ext-calendar-customizer', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 
+			include_once dirname( __FILE__ ) . '/vendor/class-kirki-installer-section.php';
+
+
 			if ( ! class_exists( 'Tribe__View_Class' ) ) {
-				require_once dirname( __FILE__ ) . '/src/classes/View_Class.php';
+				require_once dirname( __FILE__ ) . '/src/class-view.php';
 			}
 			if ( ! class_exists( 'Month_View_Class' ) ) {
-				require_once dirname( __FILE__ ) . '/src/classes/Month_View_Class.php';
+				require_once dirname( __FILE__ ) . '/src/class-month-view.php';
 			}
 
 			$month_view = new Month_View_Class();
