@@ -52,7 +52,8 @@ if (
 			// Don't forget to generate the 'languages/match-the-plugin-directory-name.pot' file
 			load_plugin_textdomain( 'tribe-ext-calendar-customizer', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 
-			include_once dirname( __FILE__ ) . '/vendor/class-kirki-installer-section.php';
+			// For later use
+			//include_once dirname( __FILE__ ) . '/vendor/class-kirki-installer-section.php';
 
 
 			if ( ! class_exists( 'Tribe__View_Class' ) ) {
