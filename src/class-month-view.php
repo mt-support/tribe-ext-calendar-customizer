@@ -545,18 +545,4 @@ class Month_View_Class extends Tribe__View_Class {
 		<?php
 	} // end function tecc_css()
 
-	/**
-	 * Enqueue script for live preview
-	 */
-	public function tecc_live_preview() {
-		echo "xxx" . MY_PLUGIN_PATH;
-		wp_enqueue_script(
-			'tribe-ext-calendar-customizer-plugin-1',
-			MY_PLUGIN_PATH . 'js/tribe-ext-calendar-customizer.js',
-			array( 'jquery', 'customize-preview' ),
-			'1.0.0',
-			true
-		);
-	} // end function tecc_live_preview()
-
 }

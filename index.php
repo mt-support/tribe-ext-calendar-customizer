@@ -62,12 +62,22 @@ if (
 			if ( ! class_exists( 'Month_View_Class' ) ) {
 				require_once dirname( __FILE__ ) . '/src/class-month-view.php';
 			}
+			if ( ! class_exists( 'List_View_Class' ) ) {
+				require_once dirname( __FILE__ ) . '/src/class-list-view.php';
+			}
 
 			$month_view = new Month_View_Class();
 
 			add_action( 'customize_register', array( $month_view, 'tecc_register_customizer' ) );
 			add_action( 'wp_head', array( $month_view, 'tecc_css' ) );
-			add_action( 'customize_preview_init', array( $month_view, 'tecc_live_preview' ) );
+			add_action( 'customize_preview_init', array( $month_view, 'live_preview' ) );
+
+			$list_view = new List_View_Class();
+
+			add_action( 'customize_register', array( $list_view, 'register_customizer' ) );
+			add_action( 'wp_head', array( $list_view, 'list_view_css' ) );
+			add_action( 'customize_preview_init', array( $list_view, 'live_preview' ) );
+			//add_action( 'customize_preview_init', array( $list_view, 'tecc_live_preview' ) );
 
 		}
 
