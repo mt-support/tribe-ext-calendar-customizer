@@ -161,6 +161,45 @@
     /**
      * LIST VIEW
      */
+    /* List view, page title font size */
+    wp.customize( 'list_page_title_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '.events-list .tribe-events-page-title' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view, page title text color */
+    wp.customize( 'list_page_title_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.events-list .tribe-events-page-title' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, page title alignment */
+    wp.customize( 'list_page_title_alignment', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'left' ) {
+                $( '.events-list .tribe-events-page-title' ).css( {
+                    textAlign: 'left'
+                } );
+            }
+            else if ( to == 'center' ){
+                $( '.events-list .tribe-events-page-title' ).css( {
+                    textAlign: 'center'
+                } );
+            }
+            else if ( to == 'right' ) {
+                $( '.events-list .tribe-events-page-title' ).css( {
+                    textAlign: 'right'
+                } );
+            }
+            else {
+                $( '.events-list .tribe-events-page-title' ).css( {
+                    textAlign: 'initial'
+                } );
+            }
+        } );
+    } );
 
     /* List view separator visibility */
     wp.customize( 'list_separator_visibility', function( value ) {
