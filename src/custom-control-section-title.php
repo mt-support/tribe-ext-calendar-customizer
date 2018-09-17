@@ -15,7 +15,6 @@ class Section_Title_Custom_Control extends WP_Customize_Control {
 	public function render_content() {
 		?>
 
-
         <hr/>
         <div class="simple-notice-custom-control">
 			<?php if ( ! empty( $this->label ) ) { ?>

@@ -161,17 +161,17 @@
     /**
      * LIST VIEW
      */
-    /* List view, page title font size */
-    wp.customize( 'list_page_title_font_size', function( value ) {
-        value.bind( function( to ) {
-            $( '.events-list .tribe-events-page-title' ).css( { 'fontSize': to + 'px' } );
-        } );
-    } );
-
     /* List view, page title text color */
     wp.customize( 'list_page_title_text_color', function( value ) {
         value.bind( function( to ) {
             $( '.events-list .tribe-events-page-title' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, page title font size */
+    wp.customize( 'list_page_title_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '.events-list .tribe-events-page-title' ).css( { 'fontSize': to + 'px' } );
         } );
     } );
 
@@ -209,13 +209,6 @@
         } );
     } );
 
-    /* List view, month separator font size */
-    wp.customize( 'list_separator_font_size', function( value ) {
-        value.bind( function( to ) {
-            $( '#tribe-events-content .tribe-events-list-separator-month' ).css( { 'fontSize': to + 'px' } );
-        } );
-    } );
-
     /* List view, separator text color */
     wp.customize( 'list_separator_text_color', function( value ) {
         value.bind( function( to ) {
@@ -231,7 +224,14 @@
         } );
     } );
 
-    /* Date alignment */
+    /* List view, month separator font size */
+    wp.customize( 'list_separator_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-separator-month' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view, month separator alignment */
     wp.customize( 'list_separator_alignment', function( value ) {
         value.bind( function( to ) {
             if ( to == 'left' ) {
@@ -257,5 +257,91 @@
         } );
     } );
 
+    /* List view, event title text color */
+    wp.customize( 'list_event_title_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-event-title a' ).css( 'color', to );
+        } );
+    } );
 
+    /* List view, event title font size */
+    wp.customize( 'list_event_title_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-event-title' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view, event title alignment */
+    wp.customize( 'list_event_title_alignment', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                display: 'block'
+            } );
+            if ( to == 'left' ) {
+                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                    textAlign: 'left'
+                } );
+            }
+            else if ( to == 'center' ){
+                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                    textAlign: 'center'
+                } );
+            }
+            else if ( to == 'right' ) {
+                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                    textAlign: 'right'
+                } );
+            }
+            else {
+                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                    textAlign: 'initial'
+                } );
+                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                    display: 'initial'
+                } );
+            }
+        } );
+    } );
+
+    /* List view, event date text color */
+    wp.customize( 'list_event_date_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-event-schedule-details' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, event date font size */
+    wp.customize( 'list_event_date_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view, event date alignment */
+    wp.customize( 'list_event_date_alignment', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'left' ) {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                    textAlign: 'left'
+                } );
+            }
+            else if ( to == 'center' ){
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                    textAlign: 'center'
+                } );
+            }
+            else if ( to == 'right' ) {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                    textAlign: 'right'
+                } );
+            }
+            else {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                    textAlign: 'initial'
+                } );
+            }
+        } );
+    } );
+    
+    
 })( jQuery );

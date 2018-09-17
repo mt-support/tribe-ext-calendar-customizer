@@ -55,8 +55,9 @@ if (
 			// For later use
 			//include_once dirname( __FILE__ ) . '/vendor/class-kirki-installer-section.php';
 
-			require_once dirname( __FILE__ ) . '/src/custom-control-notice.php';
-
+			if ( class_exists(  WP_Customize_Control ) ) {
+				require_once dirname( __FILE__ ) . '/src/custom-control-section-title.php';
+			}
 			if ( ! class_exists( 'Tribe__View_Class' ) ) {
 				require_once dirname( __FILE__ ) . '/src/class-view.php';
 			}
