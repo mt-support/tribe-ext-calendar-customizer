@@ -294,11 +294,11 @@
             }
             else {
                 $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
-                    textAlign: 'initial'
+                    textAlign: 'initial', display: 'initial'
                 } );
-                $( '#tribe-events-content .tribe-events-list-event-title' ).css( {
+                /*$( '#tribe-events-content .tribe-events-list-event-title' ).css( {
                     display: 'initial'
-                } );
+                } );*/
             }
         } );
     } );
@@ -313,7 +313,7 @@
     /* List view, event date font size */
     wp.customize( 'list_event_date_font_size', function( value ) {
         value.bind( function( to ) {
-            $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( { 'fontSize': to + 'px' } );
+            $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta .tribe-event-schedule-details' ).css( { 'fontSize': to + 'px' } );
         } );
     } );
 
@@ -321,27 +321,94 @@
     wp.customize( 'list_event_date_alignment', function( value ) {
         value.bind( function( to ) {
             if ( to == 'left' ) {
-                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta .tribe-event-schedule-details' ).css( {
                     textAlign: 'left'
                 } );
             }
             else if ( to == 'center' ){
-                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta .tribe-event-schedule-details' ).css( {
                     textAlign: 'center'
                 } );
             }
             else if ( to == 'right' ) {
-                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta .tribe-event-schedule-details' ).css( {
                     textAlign: 'right'
                 } );
             }
             else {
-                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta' ).css( {
+                $( '#tribe-events-content .tribe-events-loop .tribe-events-event-meta .tribe-event-schedule-details' ).css( {
                     textAlign: 'initial'
                 } );
             }
         } );
     } );
-    
-    
+
+    /* List view, event description text color */
+    wp.customize( 'list_event_description_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-event-description' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, event description font size */
+    wp.customize( 'list_event_description_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-list-event-description' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view "Find out more" underline */
+    wp.customize( 'list_event_findoutmore_underline', function( value ) {
+        value.bind( function( to ) {
+            var display = true === to ? 'none' : '' ;
+            $( '#tribe-events-content .tribe-events-read-more' ).css( 'boxShadow', display );
+        } );
+    } );
+
+    /* List view, "Find out more" text color */
+    wp.customize( 'list_event_findoutmore_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-read-more' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, "Find out more" font size */
+    wp.customize( 'list_event_findoutmore_font_size', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content .tribe-events-read-more' ).css( { 'fontSize': to + 'px' } );
+        } );
+    } );
+
+    /* List view, "Find out more" alignment */
+    wp.customize( 'list_event_findoutmore_alignment', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'left' ) {
+                $( '#tribe-events-content .tribe-events-read-more' ).css( {
+                    float: 'left',
+                    display: 'initial'
+                } );
+            }
+            else if ( to == 'center' ){
+                $( '#tribe-events-content .tribe-events-read-more' ).css( {
+                    float: 'initial',
+                    display: 'table',
+                    margin: 'auto'
+                } );
+            }
+            else if ( to == 'right' ) {
+                $( '#tribe-events-content .tribe-events-read-more' ).css( {
+                    float: 'right',
+                    display: 'initial'
+                } );
+            }
+            else {
+                $( '#tribe-events-content .tribe-events-read-more' ).css( {
+                    float: 'initial',
+                    display: 'initial'
+                } );
+            }
+        } );
+    } );
+
+
 })( jQuery );
