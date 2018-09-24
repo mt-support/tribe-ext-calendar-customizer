@@ -7,8 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Tribe__View_Class' ) ) {
 
+
 	/**
-	 * Helper for ...
+	 * Class Tribe__View_Class
 	 */
 	abstract class Tribe__View_Class {
 

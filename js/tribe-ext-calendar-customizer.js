@@ -410,5 +410,33 @@
         } );
     } );
 
+    /* List view, Featured Event background color */
+    wp.customize( 'list_event_featured_event_background_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured' ).css( 'backgroundColor', to );
+        } );
+    } );
+
+    /* List view, Featured Event title text color */
+    wp.customize( 'list_event_featured_event_title_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-list-event-title a' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, Featured Event meta color */
+    wp.customize( 'list_event_featured_event_meta_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta, #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta a, #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta .tribe-event-schedule-details, #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-read-more' ).css( 'color', to );
+        } );
+    } );
+
+    /* List view, Featured Event text color */
+    wp.customize( 'list_event_featured_event_text_color', function( value ) {
+        value.bind( function( to ) {
+            $( '#tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-content' ).css( 'color', to );
+        } );
+    } );
+
 
 })( jQuery );

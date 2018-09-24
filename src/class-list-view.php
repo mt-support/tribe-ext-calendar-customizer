@@ -21,19 +21,19 @@ class List_View_Class extends Tribe__View_Class {
 	 */
 	public function register_customizer( $wp_customize ) {
 
-        // Section title for page title
+		// Section title for page title
 		$wp_customize->add_setting( 'title_page_title',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_page_title',
-			array(
-				'label' => _x( 'Page title', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Page title', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -41,19 +41,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_page_title_text_color',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_page_title_text_color',
-				array(
+				[
 					'label'    => __( 'Page Title Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_page_title_text_color'
-				)
+				]
 			)
 		);
 
@@ -62,23 +62,23 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_page_title_font_size',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_page_title_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( 'Page Title Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		/**
@@ -86,38 +86,38 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_page_title_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_page_title_alignment',
-			array(
+			[
 				'label'   => __( 'Page Title Text Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
-			)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
 		);
 
 		// Section title for month separator
 		$wp_customize->add_setting( 'title_separator',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_separator',
-			array(
-				'label' => _x( 'Month Separator', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Month Separator', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -125,18 +125,18 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_separator_visibility',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_separator_visibility',
-			array(
-				'label' => __( 'Hide Month Separator', 'tribe-ext-calendar-customizer' ),
-				'section' => 'day_list_view',
+			[
+				'label'    => __( 'Hide Month Separator', 'tribe-ext-calendar-customizer' ),
+				'section'  => 'day_list_view',
 				'settings' => 'list_separator_visibility',
-				'type' => 'checkbox',
-			)
+				'type'     => 'checkbox',
+			]
 		);
 
 		/**
@@ -144,20 +144,20 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_separator_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_separator_text_color',
-				array(
-					'label'    => __( 'Month Separator Text Color', 'tribe-ext-calendar-customizer' ),
+				[
+					'label'       => __( 'Month Separator Text Color', 'tribe-ext-calendar-customizer' ),
 					'description' => __( 'Affects the color of the decorative line as well, when using Tribe Events Styles', 'tribe-ext-calendar-customizer' ),
-					'section'  => 'day_list_view',
-					'settings' => 'list_separator_text_color'
-				)
+					'section'     => 'day_list_view',
+					'settings'    => 'list_separator_text_color'
+				]
 			)
 		);
 
@@ -166,19 +166,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_separator_background_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_separator_background_color',
-				array(
+				[
 					'label'    => __( 'Month Separator Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_separator_background_color'
-				)
+				]
 			)
 		);
 
@@ -187,23 +187,23 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_separator_font_size',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_separator_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( 'Month Separator Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		/**
@@ -211,38 +211,38 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_separator_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_separator_alignment',
-			array(
+			[
 				'label'   => __( 'Month Separator Text Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
-			)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
 		);
 
 		// Section title for Event Title
 		$wp_customize->add_setting( 'title_event_title',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event_title',
-			array(
-				'label' => __( 'Event Title', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Event Title', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -250,19 +250,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_title_text_color',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_event_title_text_color',
-				array(
+				[
 					'label'    => __( 'Event Title Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_event_title_text_color'
-				)
+				]
 			)
 		);
 
@@ -271,23 +271,23 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_title_font_size',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_title_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( 'Event Title Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		/**
@@ -295,38 +295,38 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_title_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_title_alignment',
-			array(
+			[
 				'label'   => __( 'Event Title Text Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
-			)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
 		);
 
 		// Section title for Event Date
 		$wp_customize->add_setting( 'title_event_date',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event_date',
-			array(
-				'label' => __( 'Event Date', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Event Date', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -334,19 +334,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_date_text_color',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_event_date_text_color',
-				array(
+				[
 					'label'    => __( 'Event Date Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_event_date_text_color'
-				)
+				]
 			)
 		);
 
@@ -355,23 +355,23 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_date_font_size',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_date_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( 'Event Date Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		/**
@@ -379,38 +379,38 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_date_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_date_alignment',
-			array(
+			[
 				'label'   => __( 'Event Date Text Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
-			)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
 		);
 
 		// Section title for Event Description
 		$wp_customize->add_setting( 'title_event_description',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event_description',
-			array(
-				'label' => __( 'Event Description', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Event Description', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -418,19 +418,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_description_text_color',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_event_description_text_color',
-				array(
+				[
 					'label'    => __( 'Event Description Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_event_description_text_color'
-				)
+				]
 			)
 		);
 
@@ -439,39 +439,39 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_description_font_size',
-			array(
+			[
 				'transport' => 'postMessage',
-                'default'   => '',
-			)
+				'default'   => '',
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_description_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( 'Event Description Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		// Section title for 'Find out more'
 		$wp_customize->add_setting( 'title_event_findoutmore',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event_findoutmore',
-			array(
-				'label' => __( '"Find out more &raquo;" link', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( '"Find out more &raquo;" link', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 		/**
@@ -479,18 +479,18 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_findoutmore_underline',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_findoutmore_underline',
-			array(
-				'label' => __( 'Remove underline', 'tribe-ext-calendar-customizer' ),
-				'section' => 'day_list_view',
+			[
+				'label'    => __( 'Remove underline', 'tribe-ext-calendar-customizer' ),
+				'section'  => 'day_list_view',
 				'settings' => 'list_event_findoutmore_underline',
-				'type' => 'checkbox',
-			)
+				'type'     => 'checkbox',
+			]
 		);
 
 		/**
@@ -498,19 +498,19 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_findoutmore_text_color',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'list_event_findoutmore_text_color',
-				array(
+				[
 					'label'    => __( '"Find out more" Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'day_list_view',
 					'settings' => 'list_event_findoutmore_text_color'
-				)
+				]
 			)
 		);
 
@@ -519,23 +519,23 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_findoutmore_font_size',
-			array(
+			[
 				'transport' => 'postMessage',
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_findoutmore_font_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'day_list_view',
 				'label'       => __( '"Find out more" Font Size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		/**
@@ -543,43 +543,138 @@ class List_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'list_event_findoutmore_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'list_event_findoutmore_alignment',
-			array(
+			[
 				'label'   => __( '"Find out more" Text Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
+		);
+
+		// Section title for Featured event
+		$wp_customize->add_setting( 'title_event_featured',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			]
+		);
+		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event_featured',
+			[
+				'label'   => _x( 'Featured Event', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+				'section' => 'day_list_view',
+			]
+		) );
+
+		/**
+		 * List view, Featured Event Background color
+		 */
+		$wp_customize->add_setting(
+			'list_event_featured_event_background_color',
+			[
+				'transport' => 'postMessage',
+			]
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'list_event_featured_event_background_color',
+				[
+					'label'    => __( 'Featured Event Background Color', 'tribe-ext-calendar-customizer' ),
+					'section'  => 'day_list_view',
+					'settings' => 'list_event_featured_event_background_color'
+				]
 			)
 		);
 
+		/*
+		 * List view, Featured Event Title color
+		 */
+		$wp_customize->add_setting(
+			'list_event_featured_event_title_color',
+			[
+				'transport' => 'postMessage',
+			]
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'list_event_featured_event_title_color',
+				[
+					'label'    => __( 'Featured Event Title Color', 'tribe-ext-calendar-customizer' ),
+					'section'  => 'day_list_view',
+					'settings' => 'list_event_featured_event_title_color'
+				]
+			)
+		);
 
-
-
+		/*
+		 * List view, Featured Event Meta color
+		 */
+		$wp_customize->add_setting(
+			'list_event_featured_event_meta_color',
+			[
+				'transport' => 'postMessage',
+			]
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'list_event_featured_event_meta_color',
+				[
+					'label'       => __( 'Featured Event Meta Color', 'tribe-ext-calendar-customizer' ),
+					'description' => __( 'Includes Date & Time, Venue, and "Find out more&raquo;"', 'tribe-ext-calendar-customizer' ),
+					'section'     => 'day_list_view',
+					'settings'    => 'list_event_featured_event_meta_color'
+				]
+			)
+		);
+		/*
+		 * List view, Featured Event Text color
+		 */
+		$wp_customize->add_setting(
+			'list_event_featured_event_text_color',
+			[
+				'transport' => 'postMessage',
+			]
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'list_event_featured_event_text_color',
+				[
+					'label'    => __( 'Featured Event Text Color', 'tribe-ext-calendar-customizer' ),
+					'section'  => 'day_list_view',
+					'settings' => 'list_event_featured_event_text_color'
+				]
+			)
+		);
 
 
 		// Section title for other
 		$wp_customize->add_setting( 'title_other',
-			array(
-				'default' => '',
-				'transport' => 'postMessage',
+			[
+				'default'           => '',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_other',
-			array(
-				'label' => __( 'Other', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+			[
+				'label'   => _x( 'Other', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'day_list_view',
-			)
+			]
 		) );
 
 	} // end function register_customizer()
@@ -640,7 +735,7 @@ class List_View_Class extends Tribe__View_Class {
             #tribe-events-content .tribe-events-list-separator-month {
                 text-align: <?php echo get_theme_mod( 'list_separator_alignment' ); ?>;
             }
-	        <?php } // end if ?>
+            <?php } // end if ?>
 
             <?php if( get_theme_mod( 'list_event_title_text_color' ) ) { ?>
             #tribe-events-content .tribe-events-list-event-title a {
@@ -709,20 +804,54 @@ class List_View_Class extends Tribe__View_Class {
             }
             <?php } // end if ?>
 
-            <?php if( get_theme_mod( 'list_event_findoutmore_alignment' ) ) {
+            <?php
+            if( get_theme_mod( 'list_event_findoutmore_alignment' ) ) {
                 if( get_theme_mod( 'list_event_findoutmore_alignment' ) == 'center' ) { ?>
                 #tribe-events-content .tribe-events-read-more {
                     display: table;
                     margin: auto;
                 }
-                <?php }
-                else { ?>
+                <?php } // end if
+			    else { ?>
                 #tribe-events-content .tribe-events-read-more {
-                   float: <?php echo get_theme_mod( 'list_event_findoutmore_alignment' ); ?>;
+                    float: <?php echo get_theme_mod( 'list_event_findoutmore_alignment' ); ?>;
                 }
-                <?php } // end if ?>
+                <?php } // else ?>
             <?php } // end if ?>
 
+            <?php if( get_theme_mod( 'list_event_featured_event_background_color' ) ) { ?>
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured {
+                background-color: <?php echo get_theme_mod( 'list_event_featured_event_background_color' ); ?>;
+            }
+            <?php } // end if ?>
+
+            <?php if( get_theme_mod( 'list_event_featured_event_title_color' ) ) { ?>
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-list-event-title a {
+                color: <?php echo get_theme_mod( 'list_event_featured_event_title_color' ); ?>;
+            }
+            <?php } // end if ?>
+
+            <?php
+            /**
+             * Meta
+             * URLs in meta
+             * Date in meta
+             * Read more
+             */
+            if( get_theme_mod( 'list_event_featured_event_meta_color' ) ) { ?>
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta,
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta a,
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-event-meta .tribe-event-schedule-details,
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-read-more {
+                color: <?php echo get_theme_mod( 'list_event_featured_event_meta_color' ); ?>;
+            }
+            <?php } // end if ?>
+
+            <?php if( get_theme_mod( 'list_event_featured_event_text_color' ) ) { ?>
+            #tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-content {
+                color: <?php echo get_theme_mod( 'list_event_featured_event_text_color' ); ?>;
+            }
+            <?php } // end if ?>
 
         </style>
 		<?php

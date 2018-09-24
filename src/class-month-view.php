@@ -23,18 +23,18 @@ class Month_View_Class extends Tribe__View_Class {
 
 		// Section title for header row
 		$wp_customize->add_setting( 'title_header_row',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_header_row',
-			array(
+			[
 				'label' => _x( 'Header Row', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'description' => __( 'This is the row with the day names', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -42,20 +42,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_header_row_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_header_row_background',
-				array(
+				[
 					'label'    => __( 'Header Row Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_header_row_background'
-				)
+				]
 			)
 		);
 
@@ -64,20 +64,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_header_row_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_header_row_text_color',
-				array(
+				[
 					'label'    => __( 'Header Row Text Color ', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_header_row_text_color'
-				)
+				]
 			)
 		);
 
@@ -86,37 +86,37 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_header_row_cell_border_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_header_row_cell_border_color',
-				array(
+				[
 					'label'       => __( 'Header Row Cell Border Color ', 'tribe-ext-calendar-customizer' ),
 					'description' => __( 'Note: has no effect in some themes', 'tribe-ext-calendar-customizer' ),
 					'section'     => 'month_week_view',
 					'settings'    => 'tecc_header_row_cell_border_color'
-				)
+				]
 			)
 		);
 
 		// Section title for past days
 		$wp_customize->add_setting( 'title_past_days',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_past_days',
-			array(
+			[
 				'label' => _x( 'Past Days', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -124,20 +124,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_past_day_header_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_past_day_header_background',
-				array(
+				[
 					'label'    => __( 'Past Day Header Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_past_day_header_background'
-				)
+				]
 			)
 		);
 
@@ -146,20 +146,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_past_day_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_past_day_text_color',
-				array(
+				[
 					'label'    => __( 'Past Day Header Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_past_day_text_color'
-				)
+				]
 			)
 		);
 
@@ -168,36 +168,36 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_past_day_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_past_day_background',
-				array(
+				[
 					'label'    => __( 'Past Day Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_past_day_background'
-				)
+				]
 			)
 		);
 
 		// Section title for present day
 		$wp_customize->add_setting( 'title_present_day',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_present_day',
-			array(
+			[
 				'label' => _x( 'Present Day', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -205,20 +205,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_present_day_header_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_present_day_header_background',
-				array(
+				[
 					'label'    => __( 'Present Day Header Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_present_day_header_background'
-				)
+				]
 			)
 		);
 
@@ -227,20 +227,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_present_day_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_present_day_text_color',
-				array(
+				[
 					'label'    => __( 'Present Day Header Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_present_day_text_color'
-				)
+				]
 			)
 		);
 
@@ -249,36 +249,36 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_present_day_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_present_day_background',
-				array(
+				[
 					'label'    => __( 'Present Day Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_present_day_background'
-				)
+				]
 			)
 		);
 
 		// Section title for future days
 		$wp_customize->add_setting( 'title_future_day',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_future_day',
-			array(
+			[
 				'label' => _x( 'Future Days', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -286,20 +286,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_future_day_header_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_future_day_header_background',
-				array(
+				[
 					'label'    => __( 'Future Day Header Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_future_day_header_background'
-				)
+				]
 			)
 		);
 
@@ -308,20 +308,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_future_day_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_future_day_text_color',
-				array(
+				[
 					'label'    => __( 'Future Day Header Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_future_day_text_color'
-				)
+				]
 			)
 		);
 
@@ -330,36 +330,36 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_future_day_background',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_future_day_background',
-				array(
+				[
 					'label'    => __( 'Future Day Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_future_day_background'
-				)
+				]
 			)
 		);
 
 		// Section title for date
 		$wp_customize->add_setting( 'title_date',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_date',
-			array(
+			[
 				'label' => _x( 'Date', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -367,24 +367,24 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_date_alignment',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			'tecc_date_alignment',
-			array(
+			[
 				'label'   => __( 'Date Alignment', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
 				'type'    => 'select',
-				'choices' => array(
-					''       => 'default',
-					'left'   => 'Left',
-					'center' => 'Center',
-					'right'  => 'Right'
-				)
-			)
+				'choices' => [
+					''       => __( 'default', 'tribe-ext-calendar-customizer' ),
+					'left'   => __( 'Left', 'tribe-ext-calendar-customizer' ),
+					'center' => __( 'Center', 'tribe-ext-calendar-customizer' ),
+					'right'  => __( 'Right', 'tribe-ext-calendar-customizer' ),
+				]
+			]
 		);
 
 		/**
@@ -392,38 +392,38 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_date_size',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 		$wp_customize->add_control(
 			'tecc_date_size',
-			array(
+			[
 				'type'        => 'number',
 				'section'     => 'month_week_view',
 				'label'       => __( 'Date size (px)' ),
 				'description' => __( 'Leave empty to use the default font size.', 'tribe-ext-calendar-customizer' ),
-				'input_attrs' => array(
+				'input_attrs' => [
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,
-				),
-			)
+				],
+			]
 		);
 
 		// Section title for Event
 		$wp_customize->add_setting( 'title_event',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_event',
-			array(
+			[
 				'label' => _x( 'Event', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -431,20 +431,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_event_title_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_event_title_text_color',
-				array(
+				[
 					'label'    => __( 'Event Title Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'  => 'month_week_view',
 					'settings' => 'tecc_event_title_text_color'
-				)
+				]
 			)
 		);
 
@@ -453,37 +453,37 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_view_all_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_view_all_text_color',
-				array(
+				[
 					'label'       => __( '"View All" Text Color', 'tribe-ext-calendar-customizer' ),
 					'description' => __( 'If empty, the Event Title Text Color will be used.', 'tribe-ext-calendar-customizer' ),
 					'section'     => 'month_week_view',
 					'settings'    => 'tecc_view_all_text_color'
-				)
+				]
 			)
 		);
 
 		// Section title for featured events
 		$wp_customize->add_setting( 'title_featured_events',
-			array(
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
 		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_featured_events',
-			array(
+			[
 				'label' => _x( 'Featured Event', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 		/**
@@ -491,20 +491,20 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_featured_event_background_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_featured_event_background_color',
-				array(
+				[
 					'label'       => __( 'Featured Event Background Color', 'tribe-ext-calendar-customizer' ),
 					'section'     => 'month_week_view',
 					'settings'    => 'tecc_featured_event_background_color'
-				)
+				]
 			)
 		);
 
@@ -513,36 +513,36 @@ class Month_View_Class extends Tribe__View_Class {
 		 */
 		$wp_customize->add_setting(
 			'tecc_featured_event_text_color',
-			array(
+			[
 				'transport' => 'postMessage'
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'tecc_featured_event_text_color',
-				array(
+				[
 					'label'       => __( 'Featured Event Text Color', 'tribe-ext-calendar-customizer' ),
 					'section'     => 'month_week_view',
 					'settings'    => 'tecc_featured_event_text_color'
-				)
+				]
 			)
 		);
 
 		// Section title for other
-		$wp_customize->add_setting( 'title_other',
-			array(
+		$wp_customize->add_setting( 'title_other_month',
+			[
 				'default' => '',
 				'transport' => 'postMessage',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
+			]
 		);
-		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_other',
-			array(
-				'label' => __( 'Other', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
+		$wp_customize->add_control( new Section_Title_Custom_Control( $wp_customize, 'title_other_month',
+			[
+				'label' => _x( 'Other', 'Customizer section title', 'tribe-ext-calendar-customizer' ),
 				'section' => 'month_week_view',
-			)
+			]
 		) );
 
 

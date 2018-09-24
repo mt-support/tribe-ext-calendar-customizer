@@ -35,8 +35,6 @@ if (
 
 		/**
 		 * Setup the Extension's properties.
-		 *
-		 * This always executes even if the required plugins are not present.
 		 */
 		public function construct() {
 			$this->add_required_plugin( 'Tribe__Events__Main', '4.6' );
@@ -79,7 +77,6 @@ if (
 			add_action( 'customize_register', array( $list_view, 'register_customizer' ) );
 			add_action( 'wp_head', array( $list_view, 'list_view_css' ) );
 			add_action( 'customize_preview_init', array( $list_view, 'live_preview' ) );
-			//add_action( 'customize_preview_init', array( $list_view, 'tecc_live_preview' ) );
 
 		}
 
