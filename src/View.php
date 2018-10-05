@@ -15,6 +15,9 @@ if ( ! class_exists( 'Tribe__View_Class' ) ) {
 
 		/**
 		 * Enqueue script for live preview
+		 *
+		 * See notes in the header of tribe-ext-calendar-customizer.php
+		 * This script is temporarily disabled
 		 */
 		public function live_preview() {
 			wp_enqueue_script(

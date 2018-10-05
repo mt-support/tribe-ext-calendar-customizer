@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: The Events Calendar Extension: Calendar Customizer\n"
-"POT-Creation-Date: 2018-09-24 21:44+0200\n"
-"PO-Revision-Date: 2018-06-25 22:20+0200\n"
+"POT-Creation-Date: 2018-10-05 22:26+0200\n"
+"PO-Revision-Date: 2018-10-05 22:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,290 +13,285 @@ msgstr ""
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: index.php\n"
+"X-Poedit-WPHeader: tribe-ext-calendar-customizer.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/class-list-view.php:34
+#: src/List_View.php:32
 msgctxt "Customizer section title"
 msgid "Page title"
 msgstr ""
 
-#: src/class-list-view.php:53
+#: src/List_View.php:49
 msgid "Page Title Text Color"
 msgstr ""
 
-#: src/class-list-view.php:74
+#: src/List_View.php:68
 msgid "Page Title Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:75 src/class-list-view.php:200
-#: src/class-list-view.php:284 src/class-list-view.php:368
-#: src/class-list-view.php:453 src/class-list-view.php:532
-#: src/class-month-view.php:405
+#: src/List_View.php:69 src/List_View.php:184 src/List_View.php:262
+#: src/List_View.php:340 src/List_View.php:419 src/List_View.php:492
+#: src/Month_View.php:362
 msgid "Leave empty to use the default font size."
 msgstr ""
 
-#: src/class-list-view.php:96
+#: src/List_View.php:88
 msgid "Page Title Text Alignment"
 msgstr ""
 
-#: src/class-list-view.php:100 src/class-list-view.php:225
-#: src/class-list-view.php:309 src/class-list-view.php:393
-#: src/class-list-view.php:557 src/class-month-view.php:382
+#: src/List_View.php:92 src/List_View.php:207 src/List_View.php:285
+#: src/List_View.php:363 src/List_View.php:515 src/Month_View.php:341
 msgid "default"
 msgstr ""
 
-#: src/class-list-view.php:101 src/class-list-view.php:226
-#: src/class-list-view.php:310 src/class-list-view.php:394
-#: src/class-list-view.php:558 src/class-month-view.php:383
+#: src/List_View.php:93 src/List_View.php:208 src/List_View.php:286
+#: src/List_View.php:364 src/List_View.php:516 src/Month_View.php:342
 msgid "Left"
 msgstr ""
 
-#: src/class-list-view.php:102 src/class-list-view.php:227
-#: src/class-list-view.php:311 src/class-list-view.php:395
-#: src/class-list-view.php:559 src/class-month-view.php:384
+#: src/List_View.php:94 src/List_View.php:209 src/List_View.php:287
+#: src/List_View.php:365 src/List_View.php:517 src/Month_View.php:343
 msgid "Center"
 msgstr ""
 
-#: src/class-list-view.php:103 src/class-list-view.php:228
-#: src/class-list-view.php:312 src/class-list-view.php:396
-#: src/class-list-view.php:560 src/class-month-view.php:385
+#: src/List_View.php:95 src/List_View.php:210 src/List_View.php:288
+#: src/List_View.php:366 src/List_View.php:518 src/Month_View.php:344
 msgid "Right"
 msgstr ""
 
-#: src/class-list-view.php:118
+#: src/List_View.php:110
 msgctxt "Customizer section title"
 msgid "Month Separator"
 msgstr ""
 
-#: src/class-list-view.php:135
+#: src/List_View.php:125
 msgid "Hide Month Separator"
 msgstr ""
 
-#: src/class-list-view.php:156
+#: src/List_View.php:144
 msgid "Month Separator Text Color"
 msgstr ""
 
-#: src/class-list-view.php:157
+#: src/List_View.php:145
 msgid ""
 "Affects the color of the decorative line as well, when using Tribe Events "
 "Styles"
 msgstr ""
 
-#: src/class-list-view.php:178
+#: src/List_View.php:164
 msgid "Month Separator Background Color"
 msgstr ""
 
-#: src/class-list-view.php:199
+#: src/List_View.php:183
 msgid "Month Separator Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:221
+#: src/List_View.php:203
 msgid "Month Separator Text Alignment"
 msgstr ""
 
-#: src/class-list-view.php:243
+#: src/List_View.php:225
 msgctxt "Customizer section title"
 msgid "Event Title"
 msgstr ""
 
-#: src/class-list-view.php:262 src/class-month-view.php:444
+#: src/List_View.php:242 src/Month_View.php:398
 msgid "Event Title Text Color"
 msgstr ""
 
-#: src/class-list-view.php:283
+#: src/List_View.php:261
 msgid "Event Title Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:305
+#: src/List_View.php:281
 msgid "Event Title Text Alignment"
 msgstr ""
 
-#: src/class-list-view.php:327
+#: src/List_View.php:303
 msgctxt "Customizer section title"
 msgid "Event Date"
 msgstr ""
 
-#: src/class-list-view.php:346
+#: src/List_View.php:320
 msgid "Event Date Text Color"
 msgstr ""
 
-#: src/class-list-view.php:367
+#: src/List_View.php:339
 msgid "Event Date Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:389
+#: src/List_View.php:359
 msgid "Event Date Text Alignment"
 msgstr ""
 
-#: src/class-list-view.php:411
+#: src/List_View.php:381
 msgctxt "Customizer section title"
 msgid "Event Description"
 msgstr ""
 
-#: src/class-list-view.php:430
+#: src/List_View.php:398
 msgid "Event Description Text Color"
 msgstr ""
 
-#: src/class-list-view.php:452
+#: src/List_View.php:418
 msgid "Event Description Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:472
+#: src/List_View.php:438
 msgctxt "Customizer section title"
 msgid "\"Find out more &raquo;\" link"
 msgstr ""
 
-#: src/class-list-view.php:489
+#: src/List_View.php:453
 msgid "Remove underline"
 msgstr ""
 
-#: src/class-list-view.php:510
+#: src/List_View.php:472
 msgid "\"Find out more\" Text Color"
 msgstr ""
 
-#: src/class-list-view.php:531
+#: src/List_View.php:491
 msgid "\"Find out more\" Font Size (px)"
 msgstr ""
 
-#: src/class-list-view.php:553
+#: src/List_View.php:511
 msgid "\"Find out more\" Text Alignment"
 msgstr ""
 
-#: src/class-list-view.php:575 src/class-month-view.php:484
+#: src/List_View.php:533 src/Month_View.php:435
 msgctxt "Customizer section title"
 msgid "Featured Event"
 msgstr ""
 
-#: src/class-list-view.php:594 src/class-month-view.php:504
+#: src/List_View.php:550 src/Month_View.php:452
 msgid "Featured Event Background Color"
 msgstr ""
 
-#: src/class-list-view.php:615
+#: src/List_View.php:569
 msgid "Featured Event Title Color"
 msgstr ""
 
-#: src/class-list-view.php:636
+#: src/List_View.php:588
 msgid "Featured Event Meta Color"
 msgstr ""
 
-#: src/class-list-view.php:637
+#: src/List_View.php:589
 msgid "Includes Date & Time, Venue, and \"Find out more&raquo;\""
 msgstr ""
 
-#: src/class-list-view.php:657 src/class-month-view.php:526
+#: src/List_View.php:608 src/Month_View.php:471
 msgid "Featured Event Text Color"
 msgstr ""
 
-#: src/class-list-view.php:675 src/class-month-view.php:543
+#: src/List_View.php:625 src/Month_View.php:488
 msgctxt "Customizer section title"
 msgid "Other"
 msgstr ""
 
-#: src/class-month-view.php:34
+#: src/Month_View.php:32
 msgctxt "Customizer section title"
 msgid "Header Row"
 msgstr ""
 
-#: src/class-month-view.php:35
+#: src/Month_View.php:33
 msgid "This is the row with the day names"
 msgstr ""
 
-#: src/class-month-view.php:55
+#: src/Month_View.php:50
 msgid "Header Row Background Color"
 msgstr ""
 
-#: src/class-month-view.php:77
+#: src/Month_View.php:69
 msgid "Header Row Text Color "
 msgstr ""
 
-#: src/class-month-view.php:99
+#: src/Month_View.php:88
 msgid "Header Row Cell Border Color "
 msgstr ""
 
-#: src/class-month-view.php:100
+#: src/Month_View.php:89
 msgid "Note: has no effect in some themes"
 msgstr ""
 
-#: src/class-month-view.php:117
+#: src/Month_View.php:106
 msgctxt "Customizer section title"
 msgid "Past Days"
 msgstr ""
 
-#: src/class-month-view.php:137
+#: src/Month_View.php:123
 msgid "Past Day Header Background Color"
 msgstr ""
 
-#: src/class-month-view.php:159
+#: src/Month_View.php:142
 msgid "Past Day Header Text Color"
 msgstr ""
 
-#: src/class-month-view.php:181
+#: src/Month_View.php:161
 msgid "Past Day Background Color"
 msgstr ""
 
-#: src/class-month-view.php:198
+#: src/Month_View.php:178
 msgctxt "Customizer section title"
 msgid "Present Day"
 msgstr ""
 
-#: src/class-month-view.php:218
+#: src/Month_View.php:195
 msgid "Present Day Header Background Color"
 msgstr ""
 
-#: src/class-month-view.php:240
+#: src/Month_View.php:214
 msgid "Present Day Header Text Color"
 msgstr ""
 
-#: src/class-month-view.php:262
+#: src/Month_View.php:233
 msgid "Present Day Background Color"
 msgstr ""
 
-#: src/class-month-view.php:279
+#: src/Month_View.php:250
 msgctxt "Customizer section title"
 msgid "Future Days"
 msgstr ""
 
-#: src/class-month-view.php:299
+#: src/Month_View.php:267
 msgid "Future Day Header Background Color"
 msgstr ""
 
-#: src/class-month-view.php:321
+#: src/Month_View.php:286
 msgid "Future Day Header Text Color"
 msgstr ""
 
-#: src/class-month-view.php:343
+#: src/Month_View.php:305
 msgid "Future Day Background Color"
 msgstr ""
 
-#: src/class-month-view.php:360
+#: src/Month_View.php:322
 msgctxt "Customizer section title"
 msgid "Date"
 msgstr ""
 
-#: src/class-month-view.php:378
+#: src/Month_View.php:337
 msgid "Date Alignment"
 msgstr ""
 
-#: src/class-month-view.php:404
+#: src/Month_View.php:361
 msgid "Date size (px)"
 msgstr ""
 
-#: src/class-month-view.php:424
+#: src/Month_View.php:381
 msgctxt "Customizer section title"
 msgid "Event"
 msgstr ""
 
-#: src/class-month-view.php:466
+#: src/Month_View.php:417
 msgid "\"View All\" Text Color"
 msgstr ""
 
-#: src/class-month-view.php:467
+#: src/Month_View.php:418
 msgid "If empty, the Event Title Text Color will be used."
 msgstr ""
 
@@ -340,8 +335,8 @@ msgstr ""
 #: vendor/class-kirki-installer-section.php:156
 msgid ""
 "Are you sure? Dismissing this message will hide the installation "
-"recommendation and you will have to manually install and activate the "
-"plugin in the future."
+"recommendation and you will have to manually install and activate the plugin "
+"in the future."
 msgstr ""
 
 #. Plugin Name of the plugin/theme

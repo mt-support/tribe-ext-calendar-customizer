@@ -3,7 +3,7 @@
 /**
  * Simple Notice Custom Control
  */
-class Section_Title_Custom_Control extends WP_Customize_Control {
+class Custom_Control_Section_Title_Class extends WP_Customize_Control {
 	/**
 	 * The type of control being rendered
 	 */

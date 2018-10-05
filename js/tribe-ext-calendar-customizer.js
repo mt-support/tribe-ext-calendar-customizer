@@ -2,6 +2,11 @@
     "use strict";
 
     /**
+     * This file is currently not used.
+     * See the notes in the header of tribe-ext-calendar-customizer.php
+     */
+
+    /**
      * MONTH VIEW
      */
 
@@ -437,6 +442,5 @@
             $( '#tribe-events-content.tribe-events-list .tribe-events-loop .tribe-event-featured .tribe-events-content' ).css( 'color', to );
         } );
     } );
-
 
 })( jQuery );
