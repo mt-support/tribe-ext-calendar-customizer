@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( class_exists( 'Tribe__View_Class' ) ) {
 
 	/**
-	 * Helper for ...
+	 * Class Month_View_Class
 	 */
 	class Month_View_Class extends Tribe__View_Class {
 
